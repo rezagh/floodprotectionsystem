@@ -1,0 +1,69 @@
+module Sensors{
+	struct Reading {
+		long time; long date; long reading;
+	};
+	
+	enum WarningLevel{UNKNOWN, MINOR, AVERAGE, HIGH};
+	
+	enum Status{ON, OFF, RESET};
+	
+	interface Sensor {
+		readonly attribute string name;
+		attribute WarningLevel current;
+		attribute Reading currentReading;
+		attribute string zone;
+		void set_sensor_status(in Status stat);
+		Status get_sensor_status();
+		string get_pair_name();
+	};
+};
+
+module LMS{
+
+	struct Alarm {
+		long time;
+		long date;
+		string sensor;
+		string zone;
+	};
+	typedef sequence<Alarm> Log;
+	typedef sequence<string> SensorList;
+	
+	interface LMS {
+		readonly attribute string name;
+		readonly attribute Log log;
+		
+		//assuming a sensor can belong to multiple zones
+		void add_Sensor (in Sensors::Sensor aSensor, in string zone);
+		Alarm get_currrent_alarm_status(in string zone);
+		SensorList get_Sensors();
+		void raise_Alarm ( in Alarm aReading );
+		
+	};
+};
+
+module RMC{
+
+	struct AlarmData {
+		LMS::Alarm aReading;
+		string aConfirmingSensor;
+	};
+
+
+	interface RMC{
+		void raiseAlarm( in AlarmData anAlarm );
+		void registerAgency(in string who, in string contact_details, in string zone );
+		void registerUser( in string who, in string contact_details, in string zone );
+		Sensors::WarningLevel currentAlarms();
+		string interogate_Sensor(in string who, in string zone, in string sensor);
+		void add_LMS (in string name);
+		string getLmsLogs();
+		boolean confirmAlarm(in AlarmData alarmData);
+	};
+};
+
+module Users{
+	interface User{
+		void receive_email(in RMC::AlarmData alarm);
+	};
+};
