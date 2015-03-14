@@ -1,3 +1,11 @@
+Flood Protection System (CORBA - Freelancer)
+
+Technology Requirements:
+	Java 1.7
+	Batch files are for Windows
+	Eclipse IDE
+	Junit 4 library - from winthin eclipse
+	
 Running:
 	src\make_IDLs.bat: generates stubs from idl
 	deploy_LMS.bat: runs corba server for 2 LMS servers. they know their own name and their RMC.
@@ -37,14 +45,6 @@ Assumptions:
 		LMS raises alarm to RMC only when pair confirms a high reading	
 		LMS knows its RMC name
 		
-Technology Requirements:
-	Java 1.7
-	Batch files are for Windows
-	Eclipse IDE
-	Junit 4 library - from winthin eclipse
-	
-
-
 components and requirements:
 
 	sensor: is a server
