@@ -120,7 +120,7 @@ class LmsImpl extends LMSPOA {
 	 */
 	@Override
 	public void add_Sensor(Sensor aSensor, String zone) {
-		System.out.println("sensor:" + aSensor.name() +" added to " + getName());
+		System.out.println("sensor:" + aSensor.name() +" added to zone " + zone + " in LMS " + getName());
 		sensors.put(aSensor.name(),zone);
 	}
 
