@@ -7,6 +7,11 @@ import org.omg.CosNaming.NamingContextExtHelper;
 import com.fps.idl.RMC.*;
 import com.fps.utils.Constants;
 
+/**
+ * 
+ * Client of an RMC server
+ *
+ */
 public class RmcClient {
 	RMC rmc;
 	

@@ -9,6 +9,11 @@ import com.fps.idl.Users.User;
 import com.fps.idl.Users.UserHelper;
 import com.fps.utils.Constants;
 
+/**
+ * 
+ * Client of a user server. We simulated a user as a corba server for simplicity.
+ *
+ */
 public class UserClient {
 	User user;
 	

@@ -11,6 +11,12 @@ import com.fps.idl.Sensors.Status;
 import com.fps.idl.Sensors.WarningLevel;
 import com.fps.utils.TimeUtil;
 
+/**
+ * 
+ * This act as a client for all the servers in this application.
+ * It also acts as a simulator for a sernsor hardware to inject reading levels into sensor servers.
+ *
+ */
 public class Interogator extends Menu{
 	String rmcName="rmc_1";
     RMC rmc = getRMC(rmcName);

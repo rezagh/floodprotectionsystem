@@ -27,7 +27,7 @@ class LmsImpl extends LMSPOA {
 	 * Keeping a sensor zone coverage
 	 */
 	Map<String,String> sensors = new HashMap<String,String>();//sensor:zone
-	List<Alarm> allAlarms = new ArrayList<Alarm>();
+	List<Alarm> allAlarms = new ArrayList<Alarm>();//all alarms received confirmed or not.
 	Map<String , Alarm> confirmedAlarms = new HashMap<String,Alarm>();//zone:alarm
 	
 	public void setORB(ORB orb_val) {

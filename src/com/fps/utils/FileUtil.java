@@ -12,6 +12,11 @@ import com.fps.idl.Sensors.Reading;
 import com.fps.idl.Sensors.WarningLevel;
 import com.fps.rmc.domain.UserDo;
 
+/**
+ * 
+ * This file reads and writes the logs files. In real life this should be replaced by a DAO layer over database.
+ *
+ */
 public class FileUtil {
 
 	public static void writeSensorReadingLog(Reading reading, String logFile){

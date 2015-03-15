@@ -13,6 +13,10 @@ import com.fps.idl.LMS.LMSHelper;
 import com.fps.idl.Sensors.Reading;
 import com.fps.utils.Constants;
 
+/**
+ *	Client of an LMS server 
+ *
+ */
 public class LmsClient {
 	LMS lms;
 	

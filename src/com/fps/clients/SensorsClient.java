@@ -7,6 +7,11 @@ import org.omg.CosNaming.NamingContextExtHelper;
 import com.fps.idl.Sensors.*;
 import com.fps.utils.Constants;
 
+/**
+ * 
+ * Client of a sensor server
+ *
+ */
 public class SensorsClient {
 	Sensor sensor;
 	

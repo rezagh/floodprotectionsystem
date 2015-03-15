@@ -1,7 +1,11 @@
 package com.fps.rmc.domain;
 
 import com.fps.idl.RMC.AlarmData;
-
+/**
+ * 
+ * 
+ *
+ */
 public class AlarmDo {
 	AlarmData alarm;
 	String zone;

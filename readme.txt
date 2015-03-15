@@ -8,12 +8,12 @@ Technology Requirements:
 	
 Running:
 	src\make_IDLs.bat: generates stubs from idl
-	deploy_LMS.bat: runs corba server for 2 LMS servers. they know their own name and their RMC.
-	deploy_Sensors.bat: runs corba server for few sensors. They know their own name and their LMS.
-	deploy_RMC.bat: runs corba server for a single RMC.
-	deploy_Users.bat: runs corba server simulating a user that can receive alarms and email notifications
-	call_all.bat runs all above
-	run_ORB.bat: runs the ORB for Corba servers
+	call_all.bat runs all below:
+		deploy_LMS.bat: runs corba server for 2 LMS servers. they know their own name and their RMC.
+		deploy_Sensors.bat: runs corba server for few sensors. They know their own name and their LMS.
+		deploy_RMC.bat: runs corba server for a single RMC.
+		deploy_Users.bat: runs corba server simulating a user that can receive alarms and email notifications
+		run_ORB.bat: runs the ORB for Corba servers
 	
 	Interogator is the single client for everything: sensors, LMS and RMC, users. It also acts as the sensor hardware simulator. It is a menu based command line application.
 	There are some unit tests under the test package
@@ -86,9 +86,11 @@ components and requirements:
 		**A simple client program that can be used to obtain status information from the RMC is also required
 		**A simple server that represents a registered users home PC might also be considered.
 		**Registered agencies should be able to interrogate any sensor throughout the region
-		
+
+	User: We simulated a user as a corba server as well to make things easier.		
 		
 Running/testing/presentation scenario:	
+- first run call_all.bat and make sure they are all running without errors
 - interogate sensor - M1 - empty
 - add sensor to lms zone - m10
 - register user - m21
