@@ -1,4 +1,4 @@
-Flood Protection System (CORBA - Freelancer)
+Flood Protection System (CORBA)
 
 Technology Requirements:
 	Java 1.7
